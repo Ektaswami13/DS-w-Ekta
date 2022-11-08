@@ -1,0 +1,12 @@
+string = "123"
+
+combinations = []
+for i in range(len(string)):
+    acc = string[i]
+    for ii in range(i+1,i+len(string)):
+            acc += string[ii%len(string)]
+             
+    combinations.append(acc)
+    combinations.append(acc[::-1])
+            
+print(combinations)
